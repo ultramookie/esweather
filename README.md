@@ -1,2 +1,3 @@
 # esweather
-OpenWeatherMap to Elasticsearch
+
+Script to import OpenWeatherMap to Elasticsearch for fun.
