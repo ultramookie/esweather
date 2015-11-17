@@ -10,8 +10,8 @@ from elasticsearch import Elasticsearch
 # Info and API key here:
 # http://openweathermap.org/api 
 APPID = ''
-lat = '40.703493'
-lon = '-74.2605459'
+lat = ''
+lon = ''
 # can be "metric" or "imperial"
 units = 'imperial'
 elastichost='localhost:9200'
@@ -26,8 +26,10 @@ r = urllib2.urlopen(req)
 weather = json.loads(r.read())
 r.close()
 
+month = time.strftime('%m', time.localtime(weather.get('dt')))
+year = time.strftime('%Y', time.localtime(weather.get('dt')))
 index_id = weather.get('id')
 id = weather.get('dt')
-index = 'weather-' + str(index_id)
+index = 'weather-' + str(index_id) + "-" + str(year) + "-" + str(month)
 
 es.index(index=index, doc_type="weather", id=id, body=weather)
