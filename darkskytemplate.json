@@ -1,0 +1,83 @@
+{
+  "template" : "darksky-*",
+  "mappings" : {
+    "weather" : {
+      "properties" : {
+        "coord" : {
+          "type" : "geo_point"
+        },
+        "latitude" : {
+          "type" : "float"
+        },
+        "longitude" : {
+          "type" : "float"
+        },
+        "timezone" : {
+          "type" : "string"
+        },
+        "offset" : {
+          "type" : "integer"
+        },
+        "dt" : {
+          "type" : "date"
+        },
+        "currently" : {
+          "type" : "object",
+          "properties" : {
+            "time" : {
+              "type" : "long"
+            },
+            "summary" : {
+              "type" : "string"
+            },
+            "icon" : {
+              "type" : "string"
+            },
+            "nearestStormDistance" : {
+              "type" : "float"
+            },
+            "nearestStormBearing" : {
+              "type" : "float"
+            },
+            "precipIntensity" : {
+              "type" : "float"
+            },
+            "temperature" : {
+              "type" : "float"
+            },
+            "apparentTemperature" : {
+              "type" : "float"
+            },
+            "dewPoint" : {
+              "type" : "float"
+            },
+            "humidity" : {
+              "type" : "float"
+            },
+            "windSpeed" : {
+              "type" : "float"
+            },
+            "windBearing" : {
+              "type" : "float"
+            },
+            "visibility" : {
+              "type" : "float"
+            },
+            "cloudCover" : {
+              "type" : "float"
+            },
+            "pressure" : {
+              "type" : "float"
+            },
+            "ozone" : {
+              "type" : "float"
+            },
+            "precipProbability" : {
+              "type" : "float"
+            }
+          }
+        }
+      }
+    }
+  }
+}
